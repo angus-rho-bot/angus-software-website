@@ -8,6 +8,5 @@ object WelcomeStyles : StyleSheet("WelcomeStyles", isStatic = true) {
         fontSize = 24.px
         backgroundColor = rgb(71, 178, 255)
         color = rgb(255, 71, 178)
-        borderSpacing = 0.px
     }
 } 
