@@ -17,7 +17,10 @@ class HomeComponent :
             css {
                 +WelcomeStyles.textContainer
             }
+            h1 {
             +"Welcome to Angus Software"
+            }
+            
         }
     }
 }
