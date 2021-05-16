@@ -26,16 +26,17 @@ class AngusSoftwareComponent(val angusSoftwareApplicationsEnum: AngusSoftwareApp
             h1 {
                 +"Welcome to Angus Software"
             }
-            when(angusSoftwareApplicationsEnum){
-                AngusSoftwareApplicationsEnum.BLINK_READER -> child(BlinkReaderComponent::class){ }
-                else -> child(GooglePlayComponent::class) { }
+            when (angusSoftwareApplicationsEnum) {
+                AngusSoftwareApplicationsEnum.BLINK_READER -> child(BlinkReaderComponent::class) { }
+                AngusSoftwareApplicationsEnum.ANGUS_PAINT -> child(AngusPaintComponent::class) { }
+                AngusSoftwareApplicationsEnum.ANGUS_SOLITAIRE -> child(AngusSolitaireComponent::class) { }
+                AngusSoftwareApplicationsEnum.TAP_TARGET_BOOSTER -> child(TapTargetBoosterComponent::class) { }
+                AngusSoftwareApplicationsEnum.WEBSITE -> child(WebsiteComponent::class) { }
+                AngusSoftwareApplicationsEnum.GOOGLE_PLAY_STORE_LISTING -> child(GooglePlayComponent::class) { }
             }
-            a {
-                +"Blink Reader"
-                attrs {
-                    href = "#/Blink_Reader"
-                }
-            }
+            child(NavigationComponent::class) { }
         }
     }
+
+
 }

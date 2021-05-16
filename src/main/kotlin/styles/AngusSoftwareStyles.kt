@@ -18,7 +18,7 @@ object AngusSoftwareStyles : StyleSheet("AngusSoftwareStyles", isStatic = true) 
         fontSize = 24.px
         backgroundColor = blackColor
         color = pinkColor
-        height = 100.vh
+        height = 100.pct
         h1{
             marginTop = 0.px
         }

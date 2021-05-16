@@ -10,16 +10,16 @@ import styles.AngusSoftwareStyles
 
 @ExperimentalJsExport
 @JsExport
-class BlinkReaderComponent() :
+class TapTargetBoosterComponent() :
     RComponent<RProps, RState>() {
 
     override fun RBuilder.render() {
         styledDiv {
             h2 {
-                +"Blink Reader"
+                +"Tap Target Booster"
             }
             h3{
-                +"Read at an enhanced speed with Blink Reader."
+                +"Improve your touching and pressing aim with this targeting game."
             }
             p{
                 +"With four different modes to help improve you accuracy and speed, Tap Target Booster is fun way to measure and hone your touch screen skills!"
