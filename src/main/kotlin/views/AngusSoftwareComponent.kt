@@ -5,9 +5,7 @@ import react.RBuilder
 import react.RComponent
 import react.RProps
 import react.RState
-import react.dom.a
-import react.dom.h1
-import react.dom.img
+import react.dom.*
 import styled.css
 import styled.styledDiv
 import styles.AngusSoftwareStyles
@@ -19,22 +17,19 @@ class AngusSoftwareComponent(val angusSoftwareApplicationsEnum: AngusSoftwareApp
 
     override fun RBuilder.render() {
         styledDiv {
-            css {
-                +AngusSoftwareStyles.container
-            }
+
             img(src = "./angus_software_logo.png") {}
             h1 {
                 +"Welcome to Angus Software"
             }
+
             when (angusSoftwareApplicationsEnum) {
                 AngusSoftwareApplicationsEnum.BLINK_READER -> child(BlinkReaderComponent::class) { }
                 AngusSoftwareApplicationsEnum.ANGUS_PAINT -> child(AngusPaintComponent::class) { }
                 AngusSoftwareApplicationsEnum.ANGUS_SOLITAIRE -> child(AngusSolitaireComponent::class) { }
                 AngusSoftwareApplicationsEnum.TAP_TARGET_BOOSTER -> child(TapTargetBoosterComponent::class) { }
                 AngusSoftwareApplicationsEnum.WEBSITE -> child(WebsiteComponent::class) { }
-                AngusSoftwareApplicationsEnum.GOOGLE_PLAY_STORE_LISTING -> child(GooglePlayComponent::class) { }
             }
-            child(NavigationComponent::class) { }
         }
     }
 
