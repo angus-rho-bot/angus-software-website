@@ -1,10 +1,7 @@
 package views
 
 import enums.AngusSoftwareApplicationsEnum
-import react.RBuilder
-import react.RComponent
-import react.RProps
-import react.RState
+import react.*
 import react.dom.*
 import styled.css
 import styled.styledDiv
@@ -13,7 +10,7 @@ import styles.AngusSoftwareStyles
 @ExperimentalJsExport
 @JsExport
 class AngusSoftwareComponent(val angusSoftwareApplicationsEnum: AngusSoftwareApplicationsEnum) :
-    RComponent<RProps, RState>() {
+    RComponent<Props, State>() {
 
     override fun RBuilder.render() {
         styledDiv {

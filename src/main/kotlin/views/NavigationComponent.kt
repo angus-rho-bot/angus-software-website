@@ -4,6 +4,7 @@ import kotlinx.html.classes
 import kotlinx.html.id
 import react.*
 import react.dom.a
+import react.dom.attrs
 import react.dom.h2
 import styled.css
 import styled.styledDiv
@@ -12,7 +13,8 @@ import styles.AngusSoftwareStyles
 @ExperimentalJsExport
 @JsExport
 class NavigationComponent() :
-    RComponent<RProps, RState>() {
+    RComponent<Props, State
+>() {
 
     override fun RBuilder.render() {
         styledDiv {

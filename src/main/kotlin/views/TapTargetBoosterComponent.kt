@@ -1,10 +1,7 @@
 package views
 
 import react.*
-import react.dom.a
-import react.dom.h2
-import react.dom.h3
-import react.dom.p
+import react.dom.*
 import styled.css
 import styled.styledDiv
 import styles.AngusSoftwareStyles
@@ -12,7 +9,7 @@ import styles.AngusSoftwareStyles
 @ExperimentalJsExport
 @JsExport
 class TapTargetBoosterComponent() :
-    RComponent<RProps, RState>() {
+    RComponent<Props, State>() {
 
     override fun RBuilder.render() {
         styledDiv {

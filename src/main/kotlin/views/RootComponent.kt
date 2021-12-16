@@ -4,16 +4,20 @@ import enums.AngusSoftwareApplicationsEnum
 import kotlinx.html.classes
 import kotlinx.html.id
 import react.*
+import react.dom.attrs
 import react.dom.footer
 import react.router.dom.hashRouter
 import react.router.dom.route
 import react.router.dom.switch
+//import react.router.dom.hashRouter
+//import react.router.dom.route
+//import react.router.dom.switch
 import styled.css
 import styled.styledDiv
 import styles.AngusSoftwareStyles
 
 @ExperimentalJsExport
-class RootComponent : RComponent<RProps, RState>() {
+class RootComponent : RComponent<Props, State>() {
 
     override fun RBuilder.render() {
         styledDiv {
@@ -23,31 +27,31 @@ class RootComponent : RComponent<RProps, RState>() {
             attrs {
                 id = "main"
             }
-            styledDiv {
-                attrs {
-                    classes = setOf("content")
-                }
-                hashRouter {
-                    // or "browserRouter"
-                    switch {
-                        route(WEBSITE_ENDPOINT, exact = true) {
-                            AngusSoftwareComponent(AngusSoftwareApplicationsEnum.WEBSITE).render() as? ReactElement
-                        }
-                        route(BLINK_READER_ENDPOINT, exact = true) {
-                            AngusSoftwareComponent(AngusSoftwareApplicationsEnum.BLINK_READER).render() as? ReactElement
-                        }
-                        route(ANGUS_PAINT_ENDPOINT, exact = true) {
-                            AngusSoftwareComponent(AngusSoftwareApplicationsEnum.ANGUS_PAINT).render() as? ReactElement
-                        }
-                        route(ANGUS_SOLITAIRE_ENDPOINT, exact = true) {
-                            AngusSoftwareComponent(AngusSoftwareApplicationsEnum.ANGUS_SOLITAIRE).render() as? ReactElement
-                        }
-                        route(TAP_TARGET_BOOSTER_ENDPOINT, exact = true) {
-                            AngusSoftwareComponent(AngusSoftwareApplicationsEnum.TAP_TARGET_BOOSTER).render() as? ReactElement
-                        }
-                    }
-                }
-            }
+//            styledDiv {
+//                attrs {
+//                    classes = setOf("content")
+//                }
+//                hashRouter {
+//                    // or "browserRouter"
+//                    switch {
+//                        route(WEBSITE_ENDPOINT, exact = true) {
+//                            AngusSoftwareComponent(AngusSoftwareApplicationsEnum.WEBSITE).render() as? ReactElement
+//                        }
+//                        route(BLINK_READER_ENDPOINT, exact = true) {
+//                            AngusSoftwareComponent(AngusSoftwareApplicationsEnum.BLINK_READER).render() as? ReactElement
+//                        }
+//                        route(ANGUS_PAINT_ENDPOINT, exact = true) {
+//                            AngusSoftwareComponent(AngusSoftwareApplicationsEnum.ANGUS_PAINT).render() as? ReactElement
+//                        }
+//                        route(ANGUS_SOLITAIRE_ENDPOINT, exact = true) {
+//                            AngusSoftwareComponent(AngusSoftwareApplicationsEnum.ANGUS_SOLITAIRE).render() as? ReactElement
+//                        }
+//                        route(TAP_TARGET_BOOSTER_ENDPOINT, exact = true) {
+//                            AngusSoftwareComponent(AngusSoftwareApplicationsEnum.TAP_TARGET_BOOSTER).render() as? ReactElement
+//                        }
+//                    }
+//                }
+//            }
             footer {
                 child(NavigationComponent::class) { }
             }

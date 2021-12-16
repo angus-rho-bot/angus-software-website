@@ -1,19 +1,13 @@
 package views
 
-import react.RBuilder
-import react.RComponent
-import react.RProps
-import react.RState
-import react.dom.a
-import react.dom.h2
-import react.dom.h3
-import react.dom.p
+import react.*
+import react.dom.*
 import styled.styledDiv
 
 @ExperimentalJsExport
 @JsExport
 class BlinkReaderComponent() :
-    RComponent<RProps, RState>() {
+    RComponent<Props, State>() {
 
     override fun RBuilder.render() {
         styledDiv {
