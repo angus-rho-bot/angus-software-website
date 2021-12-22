@@ -4,12 +4,7 @@ import react.*
 import react.dom.*
 import styled.styledDiv
 
-@ExperimentalJsExport
-@JsExport
-class WebsiteComponent() :
-    RComponent<Props, State>() {
-
-    override fun RBuilder.render() {
+fun RBuilder.websiteComponent() =
         styledDiv {
             h3 {
                 +"The Official Website of Angus Software"
@@ -32,5 +27,3 @@ class WebsiteComponent() :
             }
 
         }
-    }
-}

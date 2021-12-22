@@ -5,38 +5,33 @@ import react.dom.a
 import react.dom.attrs
 import styled.styledDiv
 
-@ExperimentalJsExport
-@JsExport
-class NavigationComponent() :
-    RComponent<Props, State>() {
-
-    override fun RBuilder.render() {
+fun RBuilder.navigationComponent() =
         styledDiv {
             a {
                 +"Angus Paint"
                 attrs {
-                    href = convertEndpointToLink(RootComponent.ANGUS_PAINT_ENDPOINT)
+                    href = ANGUS_PAINT_ENDPOINT
                 }
             }
             + " | "
             a {
                 +"Angus Solitaire"
                 attrs {
-                    href = convertEndpointToLink(RootComponent.ANGUS_SOLITAIRE_ENDPOINT)
+                    href = ANGUS_SOLITAIRE_ENDPOINT
                 }
             }
             + " | "
             a {
                 +"Blink Reader"
                 attrs {
-                    href = convertEndpointToLink(RootComponent.BLINK_READER_ENDPOINT)
+                    href = BLINK_READER_ENDPOINT
                 }
             }
             + " | "
             a {
                 +"Tap Target Booster"
                 attrs {
-                    href = convertEndpointToLink(RootComponent.TAP_TARGET_BOOSTER_ENDPOINT)
+                    href = TAP_TARGET_BOOSTER_ENDPOINT
                 }
             }
             + " | "
@@ -51,13 +46,7 @@ class NavigationComponent() :
             a {
                 +"Angus Software Website"
                 attrs {
-                    href = convertEndpointToLink(RootComponent.WEBSITE_ENDPOINT)
+                    href = WEBSITE_ENDPOINT
                 }
             }
         }
-    }
-
-    private fun convertEndpointToLink(endpoint: String): String {
-        return endpoint
-    }
-}

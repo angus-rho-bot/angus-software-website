@@ -4,12 +4,7 @@ import react.*
 import react.dom.*
 import styled.styledDiv
 
-@ExperimentalJsExport
-@JsExport
-class TapTargetBoosterComponent() :
-    RComponent<Props, State>() {
-
-    override fun RBuilder.render() {
+fun RBuilder.tapTargetBoosterComponent() =
         styledDiv {
             h2 {
                 +"Tap Target Booster"
@@ -29,5 +24,3 @@ class TapTargetBoosterComponent() :
                 +"measure and hone your touch screen skills!"
             }
         }
-    }
-}

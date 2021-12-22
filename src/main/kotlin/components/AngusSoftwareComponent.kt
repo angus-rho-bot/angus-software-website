@@ -1,37 +1,25 @@
 package components
 
 import enums.AngusSoftwareApplicationsEnum
-import react.*
-import react.dom.*
+import react.RBuilder
+import react.dom.h1
+import react.dom.img
 import styled.styledDiv
 
-external interface AngusSoftwareComponentProps : PropsWithChildren {
-    var angusSoftwareApplicationsEnum: AngusSoftwareApplicationsEnum
-}
 
-@ExperimentalJsExport
-@JsExport
-class AngusSoftwareComponent() :
-    RComponent<AngusSoftwareComponentProps, State>() {
+fun RBuilder.angusSoftwareComponent(angusSoftwareApplicationsEnum: AngusSoftwareApplicationsEnum) = styledDiv {
 
-    override fun RBuilder.render() {
-        styledDiv {
-
-            img(src = "./angus_software_logo.png") {}
-            h1 {
-                +"Welcome to Angus Software"
-            }
-
-            console.info(props.angusSoftwareApplicationsEnum)
-            when (props.angusSoftwareApplicationsEnum) {
-                AngusSoftwareApplicationsEnum.BLINK_READER -> child(BlinkReaderComponent::class) { }
-                AngusSoftwareApplicationsEnum.ANGUS_PAINT -> child(AngusPaintComponent::class) { }
-                AngusSoftwareApplicationsEnum.ANGUS_SOLITAIRE -> child(AngusSolitaireComponent::class) { }
-                AngusSoftwareApplicationsEnum.TAP_TARGET_BOOSTER -> child(TapTargetBoosterComponent::class) { }
-                AngusSoftwareApplicationsEnum.WEBSITE -> child(WebsiteComponent::class) { }
-            }
-        }
+    img(src = "./angus_software_logo.png") {}
+    h1 {
+        +"Welcome to Angus Software"
     }
 
-
+    console.info(angusSoftwareApplicationsEnum)
+    when (angusSoftwareApplicationsEnum) {
+        AngusSoftwareApplicationsEnum.BLINK_READER -> blinkReaderComponent()
+        AngusSoftwareApplicationsEnum.ANGUS_PAINT -> angusPaintComponent()
+        AngusSoftwareApplicationsEnum.ANGUS_SOLITAIRE -> angusSolitaireComponent()
+        AngusSoftwareApplicationsEnum.TAP_TARGET_BOOSTER -> tapTargetBoosterComponent()
+        AngusSoftwareApplicationsEnum.WEBSITE -> websiteComponent()
+    }
 }

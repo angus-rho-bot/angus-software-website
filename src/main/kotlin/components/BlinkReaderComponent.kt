@@ -4,12 +4,7 @@ import react.*
 import react.dom.*
 import styled.styledDiv
 
-@ExperimentalJsExport
-@JsExport
-class BlinkReaderComponent() :
-    RComponent<Props, State>() {
-
-    override fun RBuilder.render() {
+fun RBuilder.blinkReaderComponent() =
         styledDiv {
             h2 {
                 +"Blink Reader"
@@ -32,5 +27,3 @@ class BlinkReaderComponent() :
                 +"and can manually control the words per minute at which the text displays."
             }
         }
-    }
-}
