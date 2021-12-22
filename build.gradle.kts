@@ -34,10 +34,9 @@ dependencies {
     implementation("org.jetbrains.kotlin-wrappers:kotlin-styled:5.3.3-pre.264-kotlin-1.5.31")
     implementation(npm("styled-components", "~5.3.3"))
 
-
-    implementation("org.jetbrains:kotlin-react-router-dom:5.2.0-pre.148-kotlin-1.4.30")
-    implementation("org.jetbrains:kotlin-redux:4.0.5-pre.148-kotlin-1.4.30")
-    implementation("org.jetbrains:kotlin-react-redux:7.2.2-pre.148-kotlin-1.4.30")
+    implementation("org.jetbrains.kotlin-wrappers:kotlin-redux:4.1.0-pre.252-kotlin-1.5.31")
+    implementation("org.jetbrains.kotlin-wrappers:kotlin-react-redux:7.2.4-pre.252-kotlin-1.5.31")
+    implementation("org.jetbrains.kotlin-wrappers:kotlin-react-router-dom:5.2.0-pre.252-kotlin-1.5.31")
 }
 
 // Heroku Deployment (chapter 9)

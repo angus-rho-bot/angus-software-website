@@ -7,10 +7,14 @@ import styled.css
 import styled.styledDiv
 import styles.AngusSoftwareStyles
 
+external interface AngusSoftwareComponentProps : PropsWithChildren {
+    var angusSoftwareApplicationsEnum: AngusSoftwareApplicationsEnum
+}
+
 @ExperimentalJsExport
 @JsExport
-class AngusSoftwareComponent(val angusSoftwareApplicationsEnum: AngusSoftwareApplicationsEnum) :
-    RComponent<Props, State>() {
+class AngusSoftwareComponent() :
+    RComponent<AngusSoftwareComponentProps, State>() {
 
     override fun RBuilder.render() {
         styledDiv {
@@ -20,7 +24,8 @@ class AngusSoftwareComponent(val angusSoftwareApplicationsEnum: AngusSoftwareApp
                 +"Welcome to Angus Software"
             }
 
-            when (angusSoftwareApplicationsEnum) {
+            console.info(props.angusSoftwareApplicationsEnum)
+            when (props.angusSoftwareApplicationsEnum) {
                 AngusSoftwareApplicationsEnum.BLINK_READER -> child(BlinkReaderComponent::class) { }
                 AngusSoftwareApplicationsEnum.ANGUS_PAINT -> child(AngusPaintComponent::class) { }
                 AngusSoftwareApplicationsEnum.ANGUS_SOLITAIRE -> child(AngusSolitaireComponent::class) { }

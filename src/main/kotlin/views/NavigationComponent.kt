@@ -13,8 +13,7 @@ import styles.AngusSoftwareStyles
 @ExperimentalJsExport
 @JsExport
 class NavigationComponent() :
-    RComponent<Props, State
->() {
+    RComponent<Props, State>() {
 
     override fun RBuilder.render() {
         styledDiv {
@@ -64,6 +63,6 @@ class NavigationComponent() :
     }
 
     private fun convertEndpointToLink(endpoint: String): String {
-        return "#$endpoint"
+        return endpoint
     }
 }
