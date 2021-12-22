@@ -14,7 +14,7 @@ fun RBuilder.angusSoftwareComponent(angusSoftwareApplicationsEnum: AngusSoftware
         +"Welcome to Angus Software"
     }
 
-    console.info(angusSoftwareApplicationsEnum)
+    console.info("attention! " + angusSoftwareApplicationsEnum)
     when (angusSoftwareApplicationsEnum) {
         AngusSoftwareApplicationsEnum.BLINK_READER -> blinkReaderComponent()
         AngusSoftwareApplicationsEnum.ANGUS_PAINT -> angusPaintComponent()

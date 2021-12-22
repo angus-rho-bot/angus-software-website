@@ -10,28 +10,28 @@ fun RBuilder.navigationComponent() =
             a {
                 +"Angus Paint"
                 attrs {
-                    href = ANGUS_PAINT_ENDPOINT
+                    href = convertEndpointToLink(ANGUS_PAINT_ENDPOINT)
                 }
             }
             + " | "
             a {
                 +"Angus Solitaire"
                 attrs {
-                    href = ANGUS_SOLITAIRE_ENDPOINT
+                    href = convertEndpointToLink(ANGUS_SOLITAIRE_ENDPOINT)
                 }
             }
             + " | "
             a {
                 +"Blink Reader"
                 attrs {
-                    href = BLINK_READER_ENDPOINT
+                    href = convertEndpointToLink(BLINK_READER_ENDPOINT)
                 }
             }
             + " | "
             a {
                 +"Tap Target Booster"
                 attrs {
-                    href = TAP_TARGET_BOOSTER_ENDPOINT
+                    href = convertEndpointToLink(TAP_TARGET_BOOSTER_ENDPOINT)
                 }
             }
             + " | "
@@ -46,7 +46,11 @@ fun RBuilder.navigationComponent() =
             a {
                 +"Angus Software Website"
                 attrs {
-                    href = WEBSITE_ENDPOINT
+                    href = convertEndpointToLink(WEBSITE_ENDPOINT)
                 }
             }
         }
+
+private fun convertEndpointToLink(endpoint: String): String {
+    return "#$endpoint"
+}
