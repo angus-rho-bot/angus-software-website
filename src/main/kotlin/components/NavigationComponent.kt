@@ -1,14 +1,9 @@
-package views
+package components
 
-import kotlinx.html.classes
-import kotlinx.html.id
 import react.*
 import react.dom.a
 import react.dom.attrs
-import react.dom.h2
-import styled.css
 import styled.styledDiv
-import styles.AngusSoftwareStyles
 
 @ExperimentalJsExport
 @JsExport

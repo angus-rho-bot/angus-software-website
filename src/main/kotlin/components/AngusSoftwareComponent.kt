@@ -1,11 +1,9 @@
-package views
+package components
 
 import enums.AngusSoftwareApplicationsEnum
 import react.*
 import react.dom.*
-import styled.css
 import styled.styledDiv
-import styles.AngusSoftwareStyles
 
 external interface AngusSoftwareComponentProps : PropsWithChildren {
     var angusSoftwareApplicationsEnum: AngusSoftwareApplicationsEnum

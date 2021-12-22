@@ -1,4 +1,4 @@
-package views
+package components
 
 import react.*
 import react.dom.*

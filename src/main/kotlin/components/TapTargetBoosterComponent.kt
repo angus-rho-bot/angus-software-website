@@ -1,10 +1,8 @@
-package views
+package components
 
 import react.*
 import react.dom.*
-import styled.css
 import styled.styledDiv
-import styles.AngusSoftwareStyles
 
 @ExperimentalJsExport
 @JsExport

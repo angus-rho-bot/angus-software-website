@@ -1,7 +1,5 @@
 package enums
 
-import views.*
-
 enum class AngusSoftwareApplicationsEnum {
     ANGUS_PAINT,
     ANGUS_SOLITAIRE,

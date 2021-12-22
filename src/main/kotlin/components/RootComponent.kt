@@ -1,13 +1,11 @@
-package views
+package components
 
 import enums.AngusSoftwareApplicationsEnum
 import kotlinx.html.classes
 import kotlinx.html.id
 import react.*
 import react.dom.attrs
-import react.dom.div
 import react.dom.footer
-import react.dom.h1
 import react.router.dom.*
 //import react.router.dom.hashRouter
 //import react.router.dom.route
