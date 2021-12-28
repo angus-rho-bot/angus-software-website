@@ -1,4 +1,4 @@
-package components
+package angussoftwarewebsite.components
 
 import react.*
 import react.dom.a

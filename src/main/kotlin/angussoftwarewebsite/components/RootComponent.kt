@@ -1,18 +1,17 @@
-package components
+package angussoftwarewebsite.components
 
-import enums.AngusSoftwareApplicationsEnum
+import angussoftwarewebsite.enums.AngusSoftwareApplicationsEnum
 import kotlinx.html.classes
 import kotlinx.html.id
 import react.RBuilder
 import react.dom.attrs
 import react.dom.footer
-import react.router.dom.BrowserRouter
 import react.router.dom.HashRouter
 import react.router.dom.Route
 import react.router.dom.Switch
 import styled.css
 import styled.styledDiv
-import styles.AngusSoftwareStyles
+import angussoftwarewebsite.styles.AngusSoftwareStyles
 
 fun RBuilder.rootComponent() = styledDiv {
     css {

@@ -1,4 +1,4 @@
-package styles
+package angussoftwarewebsite.styles
 
 import kotlinx.css.*
 import styled.StyleSheet

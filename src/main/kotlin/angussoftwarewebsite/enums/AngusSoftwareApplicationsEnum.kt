@@ -1,4 +1,4 @@
-package enums
+package angussoftwarewebsite.enums
 
 enum class AngusSoftwareApplicationsEnum {
     ANGUS_PAINT,
