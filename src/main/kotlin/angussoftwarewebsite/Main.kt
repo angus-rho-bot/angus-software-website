@@ -6,7 +6,10 @@ import angussoftwarewebsite.components.rootComponent
 
 @OptIn(ExperimentalJsExport::class)
 fun main() {
-    render(document.getElementById("root")) {
-        rootComponent()
+    document.getElementById("root")?.let{
+        render(it) {
+            rootComponent()
+        }
     }
+
 }

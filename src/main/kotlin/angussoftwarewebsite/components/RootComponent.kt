@@ -1,17 +1,19 @@
 package angussoftwarewebsite.components
 
 import angussoftwarewebsite.enums.AngusSoftwareApplicationsEnum
+import angussoftwarewebsite.styles.AngusSoftwareStyles
 import kotlinx.html.classes
 import kotlinx.html.id
 import react.RBuilder
+import react.createElement
 import react.dom.attrs
 import react.dom.footer
+import react.router.Route
+import react.router.Routes
+import react.router.dom.BrowserRouter
 import react.router.dom.HashRouter
-import react.router.dom.Route
-import react.router.dom.Switch
 import styled.css
 import styled.styledDiv
-import angussoftwarewebsite.styles.AngusSoftwareStyles
 
 fun RBuilder.rootComponent() = styledDiv {
     css {
@@ -25,45 +27,51 @@ fun RBuilder.rootComponent() = styledDiv {
             classes = setOf("content")
             id = "routerDiv"
         }
+        // or "browserRouter"
         HashRouter {
-            // or "browserRouter"
-            Switch {
+            Routes {
                 Route {
                     attrs {
-                        path = arrayOf("/")
-                        exact = true
+                        path = "/"
+                        element = createElement {
+                            angusSoftwareComponent(AngusSoftwareApplicationsEnum.WEBSITE)
+                        }
                     }
-                    angusSoftwareComponent(AngusSoftwareApplicationsEnum.WEBSITE)
                 }
                 Route {
                     attrs {
-                        path = arrayOf(BLINK_READER_ENDPOINT)
-                        exact = true
+                        path = BLINK_READER_ENDPOINT
+                        element = createElement {
+                            angusSoftwareComponent(AngusSoftwareApplicationsEnum.BLINK_READER)
+                        }
                     }
-                    angusSoftwareComponent(AngusSoftwareApplicationsEnum.BLINK_READER)
                 }
                 Route {
                     attrs {
-                        path = arrayOf(ANGUS_PAINT_ENDPOINT)
-                        exact = true
+                        path = ANGUS_PAINT_ENDPOINT
+                        element = createElement {
+                            angusSoftwareComponent(AngusSoftwareApplicationsEnum.ANGUS_PAINT)
+                        }
                     }
-                    angusSoftwareComponent(AngusSoftwareApplicationsEnum.ANGUS_PAINT)
                 }
                 Route {
                     attrs {
-                        path = arrayOf(ANGUS_SOLITAIRE_ENDPOINT)
-                        exact = true
+                        path = ANGUS_SOLITAIRE_ENDPOINT
+                        element = createElement {
+                            angusSoftwareComponent(AngusSoftwareApplicationsEnum.ANGUS_SOLITAIRE)
+                        }
                     }
-                    angusSoftwareComponent(AngusSoftwareApplicationsEnum.ANGUS_SOLITAIRE)
                 }
                 Route {
                     attrs {
-                        path = arrayOf(TAP_TARGET_BOOSTER_ENDPOINT)
-                        exact = true
+                        path = TAP_TARGET_BOOSTER_ENDPOINT
+                        element = createElement {
+                            angusSoftwareComponent(AngusSoftwareApplicationsEnum.TAP_TARGET_BOOSTER)
+                        }
                     }
-                    angusSoftwareComponent(AngusSoftwareApplicationsEnum.TAP_TARGET_BOOSTER)
                 }
             }
+
         }
     }
     footer {

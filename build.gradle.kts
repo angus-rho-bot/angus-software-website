@@ -1,5 +1,5 @@
 plugins {
-    kotlin("js") version "1.5.31"
+    kotlin("js") version "1.6.10"
     kotlin("plugin.serialization") version "1.5.31"
 }
 
@@ -23,8 +23,11 @@ kotlin {
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlin-wrappers:kotlin-styled:5.3.3-pre.264-kotlin-1.5.31")
-    implementation("org.jetbrains.kotlin-wrappers:kotlin-react-router-dom:5.2.0-pre.252-kotlin-1.5.31")
+//    implementation("org.jetbrains.kotlin-wrappers:kotlin-styled:5.3.3-pre.264-kotlin-1.5.31")
+//    implementation("org.jetbrains.kotlin-wrappers:kotlin-react-router-dom:5.2.0-pre.252-kotlin-1.5.31")
+
+    implementation("org.jetbrains.kotlin-wrappers:kotlin-styled:5.3.3-pre.284-kotlin-1.6.10")
+    implementation("org.jetbrains.kotlin-wrappers:kotlin-react-router-dom:6.2.1-pre.284-kotlin-1.6.10")
 }
 
 rootProject.extensions.configure<org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootExtension> {
