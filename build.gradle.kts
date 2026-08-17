@@ -1,5 +1,5 @@
 plugins {
-    kotlin("js") version "1.5.0"
+    kotlin("js") version "1.9.25"
 }
 
 group = "com.angus.software.website"
